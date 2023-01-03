@@ -1,6 +1,6 @@
 const mongodb = require('mongodb')
 const dbName = 'food-app'
-const dbUrl = `mongodb+srv://Raj2710:Raj2710@raj.x3e0h.mongodb.net/${dbName}?retryWrites=true&w=majority`
+const dbUrl = `mongodb+srv://Raghav8197:QwErTy8197@cluster0.sk3se.mongodb.net/${dbName}`
 
 
 module.exports = {mongodb,dbName,dbUrl}
