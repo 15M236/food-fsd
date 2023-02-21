@@ -88,10 +88,10 @@ router.post('/login',async(req,res)=>{
   }
 })
 
-router.get('/get-data' , async(req, res) => {
-  console.log(req.body)
+router.get('/get-data/:email' , async(req, res) => {
+  console.log(req.params)
   try {
-    let user = await usersModel.find({mail : req.body.mail})
+    let user = await usersModel.findOne({email : req.params.email})
     res.send({
       statusCode : 200 ,
       user
