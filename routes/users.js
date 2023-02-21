@@ -88,4 +88,20 @@ router.post('/login',async(req,res)=>{
   }
 })
 
+router.get('/get-data' , async(req, res) => {
+  console.log(req.body)
+  try {
+    let user = await usersModel.find({mail : req.body.mail})
+    res.send({
+      statusCode : 200 ,
+      user
+    })
+  }catch (error) {
+    res.send({
+      statusCode : 500 ,
+      message : error.message
+    })
+  }
+})
+
 module.exports = router;
